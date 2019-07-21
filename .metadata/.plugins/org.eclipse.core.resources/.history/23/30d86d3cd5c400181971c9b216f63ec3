@@ -1,0 +1,28 @@
+package main;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+public class SwingDemo {
+	SwingDemo(){
+		JFrame jfrm = new JFrame("Calculator");
+		jfrm.setSize(400, 600);
+		jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JLabel jlab = new JLabel("This Calculator Cannot Calculate");
+		jfrm.add(jlab);
+		JButton jbtn1 = new JButton("+");
+		JButton jbtn2 = new JButton("-");
+		jfrm.add(jbtn1);
+		jfrm.add(jbtn2);
+		jfrm.setVisible(true);
+	}
+	public static void main(String args[]) {
+		SwingUtilities.invokeLater(new Runnable(){
+			public void run() {
+				new SwingDemo();
+			}
+		});
+	}
+}

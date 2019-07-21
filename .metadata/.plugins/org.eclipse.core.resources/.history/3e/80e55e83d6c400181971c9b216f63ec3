@@ -1,0 +1,45 @@
+package main;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+public class SwingDemo {
+	SwingDemo(){
+		JFrame jfrm = new JFrame("Calculator");
+		jfrm.setSize(400, 600);
+		jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JLabel jlab = new JLabel("This Calculator Cannot Calculate");
+		jfrm.setLayout(null);
+		jfrm.add(jlab);
+		JButton button1 = new JButton("7");
+		JButton button2 = new JButton("8");
+		JButton button3 = new JButton("9");
+		JButton button4 = new JButton("/");
+		JButton button5 = new JButton("4");
+		JButton button6 = new JButton("5");
+		JButton button7 = new JButton("6");
+		JButton button8 = new JButton("X");
+		JButton button9 = new JButton("1");
+		JButton button10 = new JButton("2");
+		JButton button11 = new JButton("3");
+		JButton button12 = new JButton("-");
+		JButton button13 = new JButton("0");
+		JButton button14 = new JButton(".");
+		JButton button15 = new JButton("=");
+		JButton button16 = new JButton("+");
+		button1.setBounds(0 , 200 , 100 , 30);
+		button2.setBounds(80 , 60 , 200 , 30);
+		jfrm.add(button1);
+		jfrm.add(button2);
+		jfrm.setVisible(true);
+	}
+	public static void main(String args[]) {
+		SwingUtilities.invokeLater(new Runnable(){
+			public void run() {
+				new SwingDemo();
+			}
+		});
+	}
+}
